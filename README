@@ -1,0 +1,62 @@
+//TOMA Bogdan Nicolae 313CB
+//SD Tema 1
+
+
+/* Pentru citirea numarului de bucket-uri convertim la tipul int argumentul 1 cu
+ functia atoi , iar pentru citirea din fisier, vom citi pe rand fiecare linie,
+ memoram in "comanda" functia dorita, iar in functie de aceasta vom citi variabilele
+ specifice. De asemenea cream tabela hash in variabila h, cu M bucket-uri si functia
+ hash "codHash". La final eliberam spatiul ocupat de "line", de h si inchidem 
+ fisierele deschise
+ 
+   Functia put:
+   -Citim key si value apoi alocam o variabila de tipul TServer cu valorile citite
+   -Parcurgem lista pentru  key-ul dat, iar daca aceasta exista deja returnam 0, daca
+   nu apelam functia InsL.
+   -Alocam un aux, care va contine valorile pe care dorim sa le inseram
+    si verificam alocarea
+   -Am ales 4 cazuri de inserare:
+   
+    1)Inserare in lista vida
+    2)Inserare la un singur element ( inainte sau dupa el)
+    3)Inserare la inceput de lista
+    4)Inserare in mijlocul listei
+    5)Inserare la finalul listei
+    
+    
+    Functia print:
+    Parcurgem vectorul de liste, iar unde nu este o lista vida, afisam numarul listei
+    si valorile acestia.
+    
+    
+    Functia get:
+    Alocam o variabila TServer care sa contina key-ul dorit, apelam functia codHash
+    pentru a afla pe ce ramura trebuie sa cautam elementul respectiv, apoi parcurgem
+    lista.
+    
+    
+    Functia remove:
+    -Alocam o variabila de tipul TServer cu key-ul citit, apoi apelam functia codHash
+    pentru a obtine codul key-ului, dupa care parcurgem doar lista corespunzatoare
+    codului.
+    -Daca lista este vida returnam 0.
+    -Daca stergem din lista care contine un singur element, lista devine nula. 
+    -Apelam functia removeLista care are doua ramuri: daca stergem primul element sau
+    nu.
+    Ambele abordari sunt similare, numai ca pentru parcurgerea listei am ales sa 
+    pornesc de la al doilea element pana la primul.
+    -Mai intai, memoram in variabila aux elementul dorit pentru stergere, apoi il 
+    deconectam de la lista. Dupa aceea eliberam continutul lui , iar apoi pe el.
+    -Functia de eliberare "freeServer" elibereaza key si value , apoi elibereaza
+    server.
+    
+    
+     Functia find:
+     Este asemanatoare cu functia get doar ca intoarce True/False in loc de value.
+     
+     Functia print_bucket:
+     Convertim numarul bucket-ului in tipul int, iar daca este mai mic decat numarul
+     de bucket-uri afisam lista respectiva , in caz contrar nu afisam nimic.
+     
+ */
+    
